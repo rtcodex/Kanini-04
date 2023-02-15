@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function  fetch(){
+                name = document.loginpage.t1.value;
+                gender = document.loginpage.gender.value;
+                   
+                document.getElementById("p1").innerHTML = "Welcome " + name.bold()+".The gender is :"+gender.bold();
+            }
+
+
+            function choose(){
+                var select = "";
+
+                java=document.getElementById("c1");
+                python=document.getElementById("c2");
+                xml=document.getElementById("c3");
+             
+
+                if(java.checked == true)
+                select += "Java"+" ";
+
+                if(python.checked == true)
+                select += "Python"+" ";
+
+                if(xml.checked == true)
+                select += "Xml"+" ";
+
+                document.getElementById("p1").innerHTML = "Selected: "+select;
+            }
+        </script>
+    </head>
+    <body>
+        <fieldset>
+            <legend><h2>Hackathon</h2></legend>
+        <form name="loginpage" method="get" action="index.html">
+        <table>
+            <tr>
+                <td><label>Name:</label></td>
+                <td><input type="text" name="t1" placeholder="Full Name" required></td>
+            </tr>
+
+            <tr>
+                <td><label>Email:</label></td>
+                <td><input type="email" placeholder="Enter Email Id" required></td>
+            </tr>
+
+            <tr>
+                <td><label>Phone No:</label></td>
+                <td><input type="tel" placeholder="Enter Phone Number" required></td>
+            </tr>
+
+            <tr>
+                <td><label>Institute Name:</label></td>
+                <td><input type="text" placeholder="Enter Institute Name" required></td>
+            </tr>
+
+            <tr>
+                <td><label>Address:</label></td>
+                <td><textarea name="address">Enter Address</textarea></td>
+            </tr>
+            
+            <tr>
+                <td><label>Gender:</label></td>
+                <td>
+                    <input type="radio" name="gender" value="Male">
+                    <label>Male</label>
+                    <input type="radio" name="gender" value="Female">
+                    <label>Female</label>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>Skills:</td>
+                <td>
+                    <input type="checkbox" name="c1" id="c1" value="html">HTML
+                    <input type="checkbox" name="c2" id="c2" value="css">CSS
+                    <input type="checkbox" name="c3" id="c3" value="js">JS
+                    
+                </td>
+            </tr>
+
+            <tr>
+                <td><label>DOB:</label></td>
+                <td><input type="date"></td>
+            </tr>
+
+            <tr>
+                <td><label>Query:</label></td>
+                <td><textarea>write your queries here</textarea></td>
+            </tr>
+
+            <tr>
+                <td><input type="button" value="Submit" onclick="fetch(),choose(); "></td>
+            </tr>
+        </table>      
+        </fieldset>
+        </form>
+
+        <p id="p1"></p>
+    </body>
+</html>
+
+<!-- document.f1.gender.value-->

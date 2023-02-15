@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function show(){
+            alert("You have successfully submitted the Book Form");
+        }
+    </script>
+</head>
+    <body>
+        <fieldset>
+            <legend> Customer Info</legend>
+            <form>
+                Name:<input type="text" placeholder="Enter your name"><br><br>
+                
+                Telephone: <input type="text" placeholder="Pattern: 234-567-8910"><br><br>
+
+                Email address: <input type="text" placeholder="Enter your email address"><br>
+            </form>
+        </fieldset>
+
+        <br>
+        <fieldset>
+            <legend>Books</legend>
+            <form>
+
+                <input type="text"> Quantity(Maximum 5): <input type="number" min="1" max="5">
+                
+                </form>
+        </fieldset>
+<br>
+        <input type="button" value="Submit" onclick="show();">
+        
+    </body>
+</html>
